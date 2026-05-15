@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/png" size="64x64" href="images/AvaniD.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+#cv-section, #projects-section, #about-section, #contact-section {
+    scroll-margin-top: 90px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background: rgb(238, 231, 228); 
+    font-family: "Playfair Display", serif;
+    padding-top: 65px;
+    overflow-x: hidden;
+}
+
+nav {
+    padding: 2rem;
+    text-align: center;
+    padding: 20px;
+    background-color: #680000;
+    position: fixed;     
+    top: 0;              
+    width: 100%;         
+    z-index: 1000; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;   
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(238, 231, 228);
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.09);
+    color: #d6cbc2;
+    display: inline-block;
+}
+
+.hero-section h1 {
+    text-align: center;
+    font-size: 8rem;
+    font-family: "Anton", sans-serif;
+    font-weight: normal;
+    color: #680000;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    
+}
+
+.hero-section h1:hover {
+    color: #634d3d;
+    transform: scale(1.05);
+    overflow-x: hidden;
+}
+
+.infoimg, .cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.infoimg > p {
+    width: 35%;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-left: 30px;
+    cursor: pointer;
+    color: #680000;
+    transition: all 1s ease;
+}
+
+.infoimg > p:hover {
+    font-size: 1.20rem;
+    margin: 25px;
+    color: #634d3d;
+    transform: scale(1.01);
+}
+
+.image {
+    display: flex;
+    margin-right: auto;
+    width: 300px;
+    height: auto;
+    transition: all 1s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.lang {
+    display: grid;
+    grid-template-rows: auto;
+    text-align: left;
+    width: 35%;
+    padding-right: 30px;
+    font-size: 1.25rem;
+    color: #680000;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.lang:hover {
+    font-size: 1.20rem;
+    margin: 25px;
+    color: #634d3d;
+    transform: scale(1.01);
+}
+
+.lang p {
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 35px;
+}
+
+.lang ul {
+    list-style: circle;
+    padding-left: 55px;
+}
+
+.lang ul li {
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.lang ul li:hover {
+    transform: scale(1.05);
+}
+
+.html:hover {
+    color: #ff4000;
+}
+
+.css:hover {
+    color: #0000ff;
+}
+
+.js:hover {
+    color: #ffc400;
+}
+
+.about-section, .contact-section, .cv-section {
+    display: grid;
+    grid-template-rows: auto;
+    width: 76%;
+    font-size: 1.20rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 50px auto;
+    color: #680000;
+}
+
+.cv-section {
+    transition: all 1s ease;
+}
+
+.about-section {
+    transition: all 1s ease;
+}
+
+.contact-section {
+    transition: all 1s ease;
+}
+
+.about-section h2, .contact-section h2, .cv-section h2 {
+    font-size: 2.5rem;
+    font-family: "Anton", sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-section p, .contact-section p, .cv-section p {
+    line-height: 1.8;
+    text-align: justify;
+    transition: all 0.5s ease;
+}
+
+.cv-section p {
+    margin-bottom: 30px;
+}
+
+.about-section p:hover, .contact-section p:hover, .cv-section p:hover {
+    width: auto;
+    color: #634d3d;
+    transform: scale(1.03);
+}
+
+.download-cv {
+    text-align: center;
+}
+
+.glass-btn {
+    display: inline-block; 
+    padding: 14px 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #680000;
+    text-decoration: none;
+    background: rgba(216, 112, 112, 0.224);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(104, 0, 0, 0.12);
+    transition: all 0.4s ease;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px rgba(104, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.8);
+    transform: translateY(-5px) scale(1.1);
+    color: #4d0000;
+}
+
+.skills {
+    display: flex;          
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.skills img {
+    width: 200px;
+    height: 200px;
+}
+
+.projects-section {
+    display: grid;
+    grid-template-rows: auto;
+    width: 90%;
+    margin: 50px auto;
+    font-size: 1.20rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #680000;
+    transition: all 1s ease;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    font-family: "Anton", sans-serif;
+    text-align: center;
+}
+
+.projects-section > p {
+    line-height: 1.8;
+    text-align: justify;
+    padding: 30px;
+    margin: 0 auto;
+    width: 90%;
+    transition: all 0.5s ease;
+}
+
+.projects-section > p:hover {
+    color: #634d3d;
+    transform: scale(1.03);
+}
+
+.projects-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    cursor: grab;
+}
+
+.projects-scroll {
+    display: flex;
+    gap: 30px;
+    padding: 20px 10px;
+    width: max-content;       
+    will-change: transform;
+}
+
+.projects-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+    background: #680000;
+    border-radius: 10px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb:hover {
+    background: #4d0000;
+}
+
+.project1, .project2, .project3, .project4 {
+    min-width: 600px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(104, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;          
+}
+
+.project1:hover, .project2:hover, .project3:hover, .project4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(104, 0, 0, 0.2);
+}
+
+.project1 h4, .project2 h4, .project3 h4, .project4 h4 {
+    font-family: "Anton", sans-serif;
+    font-size: 1.8rem;
+    color: #680000;
+    margin: 0;          
+}
+
+.project1 p, .project2 p, .project3 p, .project4 p {
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;          
+}
+
+.project1 p a, .project2 p a, .project3 p a, .project4 p a, .contact-section p a {
+    text-decoration: none;
+    color: #0b0169;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.project1 p a:hover, .project2 p a:hover, .project3 p a:hover, .project4 p a:hover, .contact-section p a:hover {
+    color: #002aff;
+    transform: scale(1.05);
+}
+
+.todo-images, .cineverse-images, .calculator-images, .lumiereSkin-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 15px;
+    width: 100%;
+    margin-top: 4px;   
+}
+
+.todo-images img, .cineverse-images img, .calculator-images img, .lumiereSkin-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.todo-images img:last-child, .cineverse-images img:last-child, .calculator-images img:last-child, .lumiereSkin-images img:last-child {
+    grid-column: 1 / 3;  
+    width: 60%;
+    margin: 0 auto;
+}
+
+.myskills-section {
+    width: 90%;
+    margin: 50px auto;
+    color: #680000;
+    cursor: pointer;
+}
+
+.myskills-section h2 {
+    font-size: 2.5rem;
+    font-family: "Anton", sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+}
+
+.skill-card {
+    background: rgba(216, 112, 112, 0.224);
+    border-radius: 14px;
+    padding: 28px 12px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px rgba(104, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.8);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.skill-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.skill-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.html-icon { background: #fff3ec; }
+.css-icon  { background: #e8f0ff; }
+.js-icon   { background: #fffbe6; }
+.github-icon { background: #f5f5f5; }
+.vscode-icon { background: #e8f4ff; }
+.canva-icon  { background: #e6f9f5; }
+.word-icon   { background: #e8f0ff; }
+.excel-icon  { background: #e6f9ed; }
+.ppt-icon    { background: #fff1ec; }
+
+.skill-label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #680000;
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin: 30px 0;
+}
+
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(216, 112, 112, 0.224);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(104, 0, 0, 0.12);
+    transition: all 0.4s ease;
+    text-decoration: none;
+    color: #680000;
+}
+
+.contact-icons a i {
+    font-size: 1.8rem;
+}
+
+.contact-icons a:hover {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px rgba(104, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.8);
+    transform: translateY(-5px) scale(1.1);
+    color: #4d0000;
+}
+
+.thanks {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Anton", sans-serif;
+    color: #680000;
+    margin-bottom: 50px;
+    cursor: context-menu;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #680000;
+    color: #fff;
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding-top: 60px; 
+    }
+
+    nav ul { 
+        gap: 1.8rem; 
+    }
+
+    .hero-section h1 { 
+        font-size: 5rem; 
+        letter-spacing: 1px; 
+    }
+    
+    .infoimg { 
+        flex-direction: column; 
+        gap: 20px; 
+        padding: 20px; 
+    }
+
+    .infoimg > p { 
+        width: 90%; 
+        padding-left: 0; 
+        text-align: center; 
+        font-size: 1.1rem; 
+        order: 2; 
+    }
+
+    .image { 
+        width: 220px; 
+        margin: 0 auto; 
+        order: 1; 
+    }
+
+    .lang { 
+        width: 90%; 
+        padding-right: 0; 
+        text-align: center; 
+        order: 3; 
+    }
+
+    .lang p { 
+        white-space: normal; 
+        padding: 15px 0 10px; 
+    }
+
+    .lang ul { 
+        display: flex; 
+        justify-content: center; 
+        gap: 25px; 
+        padding-left: 0; 
+        list-style: none; 
+    }
+
+    .about-section, .contact-section, .cv-section { 
+        width: 88%; 
+        font-size: 1.1rem; 
+    }
+
+    .skills { 
+        gap: 30px; 
+        flex-wrap: wrap; 
+    }
+
+    .skills img { 
+        width: 130px; 
+        height: 130px; 
+    }
+
+    .project1, .project2, .project3, .project4 { 
+        min-width: 420px; 
+        max-width: 420px; 
+        padding: 22px; 
+    }
+
+    .skills-grid { 
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); 
+    }
+
+    .contact-icons { 
+        gap: 20px; 
+    }
+}
+
+@media (max-width: 600px) {
+    body { 
+        padding-top: 55px; 
+    }
+
+    nav { 
+        padding: 12px 10px; 
+    }
+
+    nav ul { 
+        gap: 1rem; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    nav ul li a { 
+        font-size: 0.85rem; 
+    }
+
+    .hero-section h1 { 
+        font-size: 2.8rem; 
+        letter-spacing: 0; 
+        padding: 10px 10px 0; 
+    }
+
+    .infoimg { 
+        padding: 15px 20px; 
+        gap: 15px; 
+    }
+
+    .infoimg > p { 
+        width: 100%; 
+        font-size: 1rem; 
+        text-align: center; 
+    }
+
+    .image { 
+        width: 180px; 
+    }
+
+    .lang { 
+        width: 100%; 
+        font-size: 1rem; 
+    }
+
+    .lang p { 
+        padding: 10px 0 8px; 
+        font-size: 1rem; 
+        white-space: normal; 
+    }
+
+    .lang ul { 
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .about-section, .contact-section, .cv-section { 
+        width: 92%; 
+        font-size: 1rem; 
+        margin: 35px auto; 
+    }
+
+    .about-section h2, .contact-section h2, .cv-section h2 { 
+        font-size: 2rem; 
+    }
+
+    .skills { 
+        gap: 20px; 
+        padding: 0 15px; 
+    }
+
+    .skills img { 
+        width: 85px; 
+        height: 85px; 
+    }
+
+    .projects-section {
+        width: 100%; 
+    }
+
+    .projects-section > p { 
+        width: 100%; 
+        padding: 20px 20px 10px; 
+        font-size: 1rem; 
+    }
+
+    .projects-container { 
+        padding: 20px 0; 
+    }
+
+    .project1, .project2, .project3, .project4 {
+        min-width: 82vw; 
+        max-width: 82vw; 
+        padding: 18px; 
+        gap: 10px; 
+    }
+
+    .project1 h4, .project2 h4, .project3 h4, .project4 h4 { 
+        font-size: 1.4rem; 
+    }
+
+    .project1 p, .project2 p, .project3 p, .project4 p { 
+        font-size: 0.9rem; 
+    }
+
+    .projects-scroll { 
+        gap: 18px; 
+        padding: 10px 15px; 
+    }
+
+    .myskills-section { 
+        width: 95%; 
+    }
+
+    .myskills-section h2 { 
+        font-size: 2rem; 
+        margin-bottom: 25px; 
+    }
+
+    .skills-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 12px; 
+    }
+
+    .skill-card { 
+        padding: 18px 8px 14px; 
+        gap: 8px; 
+    }
+
+    .skill-icon { 
+        width: 44px; 
+        height: 44px; 
+    }
+
+    .skill-icon img { 
+        width: 34px; 
+        height: 34px; 
+    }
+
+    .skill-label { 
+        font-size: 0.78rem; 
+    }
+
+    .contact-icons { 
+        gap: 15px; 
+        flex-wrap: wrap; 
+        margin: 20px 0; 
+    }
+
+    .contact-icons a { 
+        width: 52px; 
+        height: 52px; 
+    }
+
+    .contact-icons a i { 
+        font-size: 1.5rem; 
+    }
+
+    footer { 
+        font-size: 0.85rem; 
+        padding: 15px; 
+    }
+
+    .thanks { 
+        font-size: 1.6rem; 
+        margin-bottom: 35px; 
+    }
+
+    .about-section p:hover, .contact-section p:hover, .cv-section p:hover,
+    .projects-section > p:hover, .infoimg > p:hover, .lang:hover { 
+        transform: none; 
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-section h1 { 
+        font-size: 2.1rem; 
+    }
+
+    nav ul { 
+        gap: 0.7rem; 
+    }
+
+    nav ul li a { 
+        font-size: 0.78rem; 
+    }
+    .skills-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    .project1, .project2, .project3, .project4 { 
+        min-width: 88vw; max-width: 88vw; 
+    }
+}
+
+</style>
+<body id="top">
+    
+    <nav>
+        <ul>
+            <li id="home" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="100"><a href="#top">Home</a></li>
+            <li id="projects" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="250"><a href="#cv-section">CV</a></li>
+            <li id="projects" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="400"><a href="#projects-section">Projects</a></li>
+            <li id="contact" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="550"><a href="#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+    <div data-aos="fade-down" data-aos-duration="2500" data-aos-delay="1800" class="hero-section">
+        <h1>AVANI DHAWAN</h1>
+        <div class="infoimg">
+            <p>Hey there! I'm a Frontend Web Developer passionate about creating beautiful and functional websites.</p>
+            <img class="image" src="images/AvaniD.png" alt="AvaniDhawan">
+            <div class="lang">
+                <p>Have a look at the languages I work with!</p>
+                <ul>
+                    <li class="html">HTML</li>
+                    <li class="css">CSS</li>
+                    <li class="js">JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section" data-aos="zoom-in-up" data-aos-duration="2000">
+        <h2>About Me</h2>
+        <p>I started with a curiosity about how websites work, which soon grew into a passion 
+            for building them from the ground up. As a BCA student focused on frontend development, 
+            I create interfaces that are not just functional, but refined, intuitive, and visually engaging.
+            <br><br>
+           My approach centers on clean design, efficient code, and attention to detail, while I continuously 
+           push myself to grow into a full-stack developer capable of delivering complete, real-world solutions.
+            <br><br>
+            Through my internship at CodeAlpha, I've gained hands-on experience working on real projects and 
+            writing structured, maintainable code in a professional environment.
+        </p>
+    </div>
+
+    <div class="skills">
+        <img src="images/skillshtml.png" alt="Skillhtml" data-aos="flip-right" data-aos-duration="1500">
+        <img src="images/skillscss.png" alt="Skillcss" data-aos="flip-right" data-aos-duration="1500" data-aos-delay="1000">
+        <img src="images/skillsjs.png" alt="Skilljs" data-aos="flip-right" data-aos-duration="1500" data-aos-delay="1500">
+    </div>
+
+    <div class="cv-section" id="cv-section" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+        <h2>Curriculum Vitae</h2>
+        <p>Future-focused web developer with hands-on experience in building dynamic and responsive web projects. I enjoy 
+            combining aesthetic design with functionality to create websites that stand out and perform.</p>
+        <div class= "download-cv" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="1500">
+            <a href="Avani Dhawan_CV.pdf" download target="_blank" class="glass-btn">
+                Download CV
+            </a>
+        </div>
+    </div>
+
+    <div class="projects-section" id="projects-section" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500" >
+        <h2>My Projects</h2>
+        <p>Check out my projects to see some of the work I've done! Each project is a testament to my 
+            dedication to creating high-quality, user-friendly web experiences. Feel free to explore 
+            and see what I've been working on!
+        </p>
+
+        <div class="projects-container" >
+            <div class="projects-scroll">
+                <div class="project1">
+                    <h4>To-Do List</h4>
+                    <p>Languages used: HTML, CSS, JS</p>
+                    <p>A clean and intuitive To-Do List web app designed for efficient task management, showcasing my ability to 
+                        build functional and user-friendly applications.
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/todo-app/todo-index.html" target="_blank">To-Do List</a>
+                    </p>
+                    <div class="todo-images">
+                        <img src="images/todo-img1.png" alt="ToDoListimg1">
+                        <img src="images/todo-img2.png" alt="ToDoListimg2">
+                        <img src="images/todo-img3.png" alt="ToDoListimg3">
+                    </div>
+                </div>
+
+                <div class="project2">
+                    <h4>CineVerse</h4>
+                    <p>Languages used: HTML, CSS, JS</p>
+                    <p>CineVerse is a sleek movie gallery web app that showcases film details with an intuitive interface and 
+                        lightbox view, highlighting my focus on seamless user experience and clean design.
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/CodeAlpha_CineVerse/" target="_blank">CineVerse</a>
+                    </p>
+                    <div class="cineverse-images">
+                        <img src="images/cineverse-img1.png" alt="Cineverseimg1">
+                        <img src="images/cineverse-img2.png" alt="Cineverseimg2">
+                        <img src="images/cineverse-img3.png" alt="Cineverseimg3">
+                    </div>
+                </div>
+
+                <div class="project3">
+                    <h4>Calculator</h4>
+                    <p>Languages used: HTML, CSS, JS</p>
+                    <p>A clean and user-friendly calculator web app designed to perform basic arithmetic operations. 
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/CodeAlpha_Calculator/" target="_blank">Calculator</a>
+                    </p>
+                    <div class="calculator-images">
+                        <img src="images/calc1.png" alt="Calculatorimg1">
+                        <img src="images/calc2.png" alt="Calculatorimg2">
+                        <img src="images/calc3.png" alt="Calculatorimg3">
+                    </div>
+                </div>
+
+                <div class="project4">
+                    <h4>Lumière Skin</h4>
+                    <p>Languages used: HTML, CSS</p>
+                    <p>A sleek and modern skincare-themed website showcasing luxury products 
+                        with a clean UI, smooth layout, and visually appealing design.
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/Lumiere-Skin/" target="_blank">Lumière Skin</a>
+                    </p>
+                    <div class="lumiereSkin-images">
+                        <img src="images/Lumiere1.png" alt="LumiereSkinimg1">
+                        <img src="images/Lumiere2.png" alt="LumiereSkinimg2">
+                        <img src="images/Lumiere3.png" alt="LumiereSkinimg3">
+                    </div>
+                </div>
+
+
+                <div class="project1">
+                    <h4>To-Do List</h4>
+                    <p>Languages used: HTML, CSS, JS</p>
+                    <p>A clean and intuitive To-Do List web app designed for efficient task management, showcasing my ability to 
+                        build functional and user-friendly applications.
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/todo-app/todo-index.html" target="_blank">To-Do List</a>
+                    </p>
+                    <div class="todo-images">
+                        <img src="images/todo-img1.png" alt="ToDoListimg1">
+                        <img src="images/todo-img2.png" alt="ToDoListimg2">
+                        <img src="images/todo-img3.png" alt="ToDoListimg3">
+                    </div>
+                </div>
+
+                <div class="project2">
+                    <h4>CineVerse</h4>
+                    <p>Languages used: HTML, CSS, JS</p>
+                    <p>CineVerse is a sleek movie gallery web app that showcases film details with an intuitive interface and 
+                        lightbox view, highlighting my focus on seamless user experience and clean design.
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/CodeAlpha_CineVerse/" target="_blank">CineVerse</a>
+                    </p>
+                    <div class="cineverse-images">
+                        <img src="images/cineverse-img1.png" alt="Cineverseimg1">
+                        <img src="images/cineverse-img2.png" alt="Cineverseimg2">
+                        <img src="images/cineverse-img3.png" alt="Cineverseimg3">
+                    </div>
+                </div>
+
+                <div class="project3">
+                    <h4>Calculator</h4>
+                    <p>Languages used: HTML, CSS, JS</p>
+                    <p>A clean and user-friendly calculator web app designed to perform basic arithmetic operations. 
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/CodeAlpha_Calculator/" target="_blank">Calculator</a>
+                    </p>
+                    <div class="calculator-images">
+                        <img src="images/calc1.png" alt="Calculatorimg1">
+                        <img src="images/calc2.png" alt="Calculatorimg2">
+                        <img src="images/calc3.png" alt="Calculatorimg3">
+                    </div>
+                </div>
+
+                <div class="project4">
+                    <h4>Lumière Skin</h4>
+                    <p>Languages used: HTML, CSS</p>
+                    <p>A sleek and modern skincare-themed website showcasing luxury products 
+                        with a clean UI, smooth layout, and visually appealing design.
+                        <br><br>
+                        Live Link: <a href="https://ad200601.github.io/Lumiere-Skin/" target="_blank">Lumière Skin</a>
+                    </p>
+                    <div class="lumiereSkin-images">
+                        <img src="images/Lumiere1.png" alt="LumiereSkinimg1">
+                        <img src="images/Lumiere2.png" alt="LumiereSkinimg2">
+                        <img src="images/Lumiere3.png" alt="LumiereSkinimg3">
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+    </div>
+
+    <div class="myskills-section" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <h2>MY SKILLS</h2>
+        <div class="skills-grid">
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1000">
+                <div class="skill-card">
+                    <div class="skill-icon html-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    </div>
+                    <span class="skill-label">HTML5</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1200">
+                <div class="skill-card">
+                    <div class="skill-icon css-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    </div>
+                    <span class="skill-label">CSS3</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1400">
+                <div class="skill-card">
+                    <div class="skill-icon js-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    </div>
+                    <span class="skill-label">JavaScript</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1800">
+                <div class="skill-card">
+                    <div class="skill-icon github-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    </div>
+                    <span class="skill-label">GitHub</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="2000">
+                <div class="skill-card">
+                    <div class="skill-icon vscode-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                    </div>
+                    <span class="skill-label">VS Code</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="2200">
+                <div class="skill-card">
+                    <div class="skill-icon canva-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+                    </div>
+                    <span class="skill-label">Canva</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="2400">
+                <div class="skill-card">
+                    <div class="skill-icon word-icon">
+                        <img src="https://img.icons8.com/color/96/microsoft-word-2019--v2.png" alt="MsWord">
+                    </div>
+                    <span class="skill-label">MS Word</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="2600">
+                <div class="skill-card">
+                    <div class="skill-icon excel-icon">
+                        <img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="MsExcel">
+                    </div>
+                    <span class="skill-label">MS Excel</span>
+                </div>
+            </div>
+
+            <div data-aos="flip-down" data-aos-duration="1500" data-aos-delay="2900">
+                <div class="skill-card">
+                    <div class="skill-icon ppt-icon">
+                        <img src="https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png" alt="MsPP">
+                    </div>
+                    <span class="skill-label">PowerPoint</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <div id="contact-section" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="1500">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, want to collaborate on a project, or just want to say hi, feel free to reach out! 
+                You can contact me through the following channels:
+            </p>
+        </div>
+        
+        <div class="contact-icons">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-delay="1000">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=avanibingo@gmail.com" target="_blank" title="Email">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+            </div>
+            
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-delay="1000">
+                <a href="https://www.instagram.com/avani_d06" target="_blank" title="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-delay="1200">
+                <a href="https://github.com/AD200601" target="_blank" title="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-delay="1400">
+                <a href="https://www.linkedin.com/in/avani-dhawan-734607303" target="_blank" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="thanks" data-aos="fade-up" data-aos-duration="2000">
+        <h2>Thank You!</h2>
+    </div>
+
+    <footer>
+        <p>© 2026 Avani Dhawan. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        const track = document.querySelector('.projects-scroll');
+        const container = document.querySelector('.projects-container');
+        let pos = 0;
+        let paused = false;
+
+        const halfWidth = track.scrollWidth / 2;
+
+        function step() {
+            if (!paused) {
+            pos += 0.6;
+            if (pos >= halfWidth) pos = 0;
+            track.style.transform = `translateX(-${pos}px)`;
+            }
+            requestAnimationFrame(step);
+        }
+
+        container.addEventListener('mouseenter', () => { paused = true; });
+        container.addEventListener('mouseleave', () => { paused = false; });
+
+        let isDragging = false;
+        let dragStartX = 0;
+        let posOnDragStart = 0;
+
+        container.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            paused = true;
+            dragStartX = e.clientX;
+            posOnDragStart = pos;
+            container.style.cursor = 'grabbing';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const delta = dragStartX - e.clientX;
+            pos = posOnDragStart + delta;
+            if (pos < 0) pos = 0;
+            if (pos >= halfWidth) pos = halfWidth - 1;
+            track.style.transform = `translateX(-${pos}px)`;
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            container.style.cursor = 'grab';
+            // Thodi der baad auto scroll resume ho
+            setTimeout(() => { paused = false; }, 2000);
+        });
+
+        // ── Touch drag (mobile) ──
+        let touchStartX = 0;
+        let posOnTouchStart = 0;
+
+        container.addEventListener('touchstart', (e) => {
+            paused = true;
+            touchStartX = e.touches[0].clientX;
+            posOnTouchStart = pos;
+        }, { passive: true });
+
+        container.addEventListener('touchmove', (e) => {
+            const delta = touchStartX - e.touches[0].clientX;
+            pos = posOnTouchStart + delta;
+            if (pos < 0) pos = 0;
+            if (pos >= halfWidth) pos = halfWidth - 1;
+            track.style.transform = `translateX(-${pos}px)`;
+        }, { passive: true });
+
+        container.addEventListener('touchend', () => {
+            // 2 second baad auto scroll resume
+            setTimeout(() => { paused = false; }, 2000);
+        });
+
+        requestAnimationFrame(step);
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+</body>
+</html>
